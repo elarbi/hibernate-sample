@@ -16,4 +16,15 @@ public class Person {
     public Person(String firstName) {
         this.firstName = firstName;
     }
+    public Person() {
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    @Override
+    public String toString() {
+        return "Person (" + firstName +")";
+    }
 }
