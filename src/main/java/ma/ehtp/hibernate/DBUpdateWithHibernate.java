@@ -15,7 +15,10 @@ public class DBUpdateWithHibernate {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         entityManager.getTransaction().begin();
-        entityManager.persist(new Person("El Arbi"));
+
+        Person person = new Person("El Arbi");
+        entityManager.persist(person);
+
         entityManager.persist(new Person("Fatima"));
         entityManager.getTransaction().commit();
 
@@ -29,7 +32,8 @@ public class DBUpdateWithHibernate {
     }
 
     static List<Person> listPersons(EntityManager entityManager) {
-        List<Person> result = entityManager.createQuery("from Person", Person.class).getResultList();
+        List<Person> result =
+                entityManager.createQuery("from Person", Person.class).getResultList();
         return result;
     }
 
