@@ -1,0 +1,26 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+
+    <display-name>
+        A servlet @ EHTP
+    </display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--Notre application est composé d'une seule servlet-->
+    <!-- Ici on défini son nom et sa classe principale qui étend Servlet-->
+    <!-- Le nom défini le context de l'applicaiton web i.e. localhost:8080/<context> -->
+    <!-- On appelera notre servlet via: http://localhost:8080/calculator -->
+    <!--<servlet>-->
+        <!--<servlet-name>somme</servlet-name>-->
+        <!--<servlet-class>ma.ehtp.Calculator</servlet-class>-->
+    <!--</servlet>-->
+
+    <!-- Comment on appel notre servlet -->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>somme</servlet-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+</web-app>
