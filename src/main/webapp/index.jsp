@@ -22,10 +22,23 @@
       houseRepo.addPerson(elArbi);
     %>
 
-   <h2>Insertion en BD de </h2><p>(<%= elArbi.getFirstName() %>)</p>
+   <h2>Insertion en BD de </h2><p><%= elArbi.getFirstName() %></p>
 
   <p> <%= request.getRequestURI().toString() %> </p>
   <a href="<%= request.getRequestURI() %>"><h3>Try Again</h3></a>
+
+   <%-- Comment --%>
+
+   <form action = "index.jsp" method = "POST">
+           First Name: <input type = "text" name = "first_name">
+           <br />
+           Last Name: <input type = "text" name = "last_name" />
+   <input type = "submit" value = "Submit" />
+   </form>
+
+ <h2>Paramètre envoyer au serveur : </h2><p></p>
+     <%= request.getParameter("first_name") %>
+     <%= request.getParameter("last_name") %>
 </body>
 
 </html>

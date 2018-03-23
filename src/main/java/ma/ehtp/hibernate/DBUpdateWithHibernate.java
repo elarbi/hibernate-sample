@@ -11,47 +11,22 @@ public class DBUpdateWithHibernate {
 
     public static void main(String[] args) {
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dariPU");
-        EntityManager em = entityManagerFactory.createEntityManager();
+
+        HouseRepository houseRepository = new HouseRepository();
 
         //add a person
         Person elArbi = new Person("El Arbi");
-        addPerson(elArbi, em);
+        houseRepository.addPerson(elArbi);
 
         //create a house and rate it by existing person
         House house1 = new House("12 Bd Ghandi, Casablanca");
         Rating rating = new Rating(elArbi);
         house1.addRating(rating);
 
-        addHouse(house1, em);
+        houseRepository.addHouse(house1);
 
-        //printing person table
-        List<Person> people = listPersons(em);
-        people.forEach(System.out::println);
-
-        em.close();
-        entityManagerFactory.close();
 
     }
-
-    static void addPerson(Person person, EntityManager em) {
-        em.getTransaction().begin();
-
-        em.persist(person);
-
-        em.getTransaction().commit();
-
-    }
-
-    static void addHouse(House house, EntityManager em) {
-        em.getTransaction().begin();
-
-        em.persist(house);
-
-        em.getTransaction().commit();
-
-    }
-
 
     static List<Person> listPersons(EntityManager entityManager) {
         List<Person> result =
