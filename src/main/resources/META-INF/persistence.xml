@@ -24,6 +24,7 @@
 
             <!-- create | drop the database -->
             <property name="javax.persistence.schema-generation.database.action" value="none"/>
+            <!--<property name="javax.persistence.schema-generation.database.action" value="create"/>-->
 
             <!-- which scripts the persistence provider shall create -->
             <property name="javax.persistence.schema-generation.scripts.action" value="none"/>
@@ -35,7 +36,7 @@
             <property name="javax.persistence.schema-generation.drop-source" value="metadata"/>
 
             <!-- Create the required database schemas true | false -->
-            <property name="javax.persistence.schema-generation.create-database-schemas" value="false"/>
+            <property name="javax.persistence.schema-generation.create-database-schemas" value="true"/>
 
             <!-- <property name="javax.persistence.schema-generation-target" value="database"/> -->
 
