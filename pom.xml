@@ -20,6 +20,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
@@ -30,6 +31,7 @@
                     <path>/myapp</path>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
