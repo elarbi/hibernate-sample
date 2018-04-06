@@ -18,7 +18,7 @@
 
     <jsp:useBean id = "houseRepo" class = "ma.ehtp.hibernate.HouseRepository" />
     <%
-      Person elArbi = new Person("El Arbi from JSP");
+      Person elArbi = new Person("Mohammed");
       houseRepo.addPerson(elArbi);
     %>
 

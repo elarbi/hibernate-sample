@@ -14,6 +14,7 @@
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <!-- acces to "dari" schema -->
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dari?useSSL=false"/>
 
             <property name="javax.persistence.jdbc.user" value="root"/>
@@ -23,7 +24,7 @@
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
 
             <!-- create | drop the database -->
-            <property name="javax.persistence.schema-generation.database.action" value="none"/>
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>
             <!--<property name="javax.persistence.schema-generation.database.action" value="create"/>-->
 
             <!-- which scripts the persistence provider shall create -->
@@ -38,7 +39,7 @@
             <!-- Create the required database schemas true | false -->
             <property name="javax.persistence.schema-generation.create-database-schemas" value="true"/>
 
-            <!-- <property name="javax.persistence.schema-generation-target" value="database"/> -->
+            <property name="javax.persistence.schema-generation-target" value="database"/>
 
             <!-- for script generation -->
             <!--<property name="javax.persistence.schema-generation.scripts.create-target" value="create.ddl" />-->
